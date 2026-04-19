@@ -1,0 +1,273 @@
+{
+  "address": "0x93650e86A116a4C8D11DE52AD742Ea343812e7DD",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_targetAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "totalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "GoalReached",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tipper",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipWithdrawn",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "donorBalances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getCompletionRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_donor",
+          "type": "address"
+        }
+      ],
+      "name": "getDonorBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "targetAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "tip",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalRaised",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xef8e74c8e69ffd25e073175d4bab59221296e97190a4b279479ee64efef01bba",
+  "receipt": {
+    "to": null,
+    "from": "0x27d30D5E6d6085Fe4EC4B06B82aDA5D0dbd9A0B4",
+    "contractAddress": "0x93650e86A116a4C8D11DE52AD742Ea343812e7DD",
+    "transactionIndex": 26,
+    "gasUsed": "415561",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x8f1d290bab23c97f12feba7b1a0d248847123f6a36aa2849a290d4ffca47a09d",
+    "transactionHash": "0xef8e74c8e69ffd25e073175d4bab59221296e97190a4b279479ee64efef01bba",
+    "logs": [],
+    "blockNumber": 10690099,
+    "cumulativeGasUsed": "3811339",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "100000000000000000"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e1eac3c25e0cec76be905e89988791d0",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_targetAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalAmount\",\"type\":\"uint256\"}],\"name\":\"GoalReached\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tipper\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TipReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TipWithdrawn\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"donorBalances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCompletionRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_donor\",\"type\":\"address\"}],\"name\":\"getDonorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"targetAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tip\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalRaised\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/TipJar.sol\":\"TipJar\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/TipJar.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\r\\npragma solidity ^0.8.13;\\r\\n\\r\\ncontract TipJar {\\r\\n    address public owner;\\r\\n    uint256 public targetAmount;\\r\\n    uint256 public totalRaised;\\r\\n\\r\\n    mapping(address => uint256) public donorBalances;\\r\\n\\r\\n    event TipReceived(address indexed tipper, uint256 amount);\\r\\n    event TipWithdrawn(address indexed owner, uint256 amount);\\r\\n    event GoalReached(uint256 totalAmount);\\r\\n\\r\\n    constructor(uint256 _targetAmount) {\\r\\n        owner = msg.sender;\\r\\n        targetAmount = _targetAmount;\\r\\n    }\\r\\n\\r\\n    modifier onlyOwner() {\\r\\n        require(msg.sender == owner, \\\"Only the owner can call this function.\\\");\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    modifier goalReached() {\\r\\n        require(address(this).balance >= targetAmount, \\\"Goal not yet reached.\\\");\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    function tip() public payable {\\r\\n        require(msg.value > 0, \\\"You must send a tip to use this function.\\\");\\r\\n\\r\\n        donorBalances[msg.sender] += msg.value;\\r\\n        totalRaised += msg.value;\\r\\n\\r\\n        emit TipReceived(msg.sender, msg.value);\\r\\n\\r\\n        if (address(this).balance >= targetAmount) {\\r\\n            emit GoalReached(address(this).balance);\\r\\n        }\\r\\n    }\\r\\n\\r\\n    function withdrawTips() public onlyOwner goalReached {\\r\\n        uint256 contractBalance = address(this).balance;\\r\\n        require(contractBalance > 0, \\\"There are no tips to withdraw.\\\");\\r\\n\\r\\n        // CEI \\ud328\\ud134: \\uc0c1\\ud0dc \\ubcc0\\uacbd \\uba3c\\uc800\\r\\n        totalRaised = 0;\\r\\n\\r\\n        (bool success, ) = payable(owner).call{ value: contractBalance }(\\\"\\\");\\r\\n        require(success, \\\"Transfer failed.\\\");\\r\\n\\r\\n        emit TipWithdrawn(owner, contractBalance);\\r\\n    }\\r\\n\\r\\n    function getDonorBalance(address _donor) public view returns (uint256) {\\r\\n        return donorBalances[_donor];\\r\\n    }\\r\\n\\r\\n    function getBalance() public view returns (uint256) {\\r\\n        return address(this).balance;\\r\\n    }\\r\\n\\r\\n    function getCompletionRate() public view returns (uint256) {\\r\\n        if (targetAmount == 0) return 0;\\r\\n        uint256 rate = (address(this).balance * 100) / targetAmount;\\r\\n        return rate > 100 ? 100 : rate;\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0x0088e9ba39b23baa4cb0a11204ad887932440ecb60cd60b19629e4b5006f79c2\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604051610626380380610626833981016040819052602c916045565b600080546001600160a01b03191633179055600155605d565b600060208284031215605657600080fd5b5051919050565b6105ba8061006c6000396000f3fe6080604052600436106100865760003560e01c80634ffa7d50116100595780634ffa7d50146100e55780637b8c8de11461011b5780638da5cb5b14610148578063953b8fb814610180578063c5c4744c1461019657600080fd5b80630cdaecc61461008b57806312065fe0146100b35780632755cd2d146100c65780633aaa74b2146100d0575b600080fd5b34801561009757600080fd5b506100a06101ac565b6040519081526020015b60405180910390f35b3480156100bf57600080fd5b50476100a0565b6100ce6101f2565b005b3480156100dc57600080fd5b506100ce61030a565b3480156100f157600080fd5b506100a06101003660046104ec565b6001600160a01b031660009081526003602052604090205490565b34801561012757600080fd5b506100a06101363660046104ec565b60036020526000908152604090205481565b34801561015457600080fd5b50600054610168906001600160a01b031681565b6040516001600160a01b0390911681526020016100aa565b34801561018c57600080fd5b506100a060015481565b3480156101a257600080fd5b506100a060025481565b60006001546000036101be5750600090565b6001546000906101cf476064610532565b6101d9919061054f565b9050606481116101e957806101ec565b60645b91505090565b600034116102595760405162461bcd60e51b815260206004820152602960248201527f596f75206d7573742073656e6420612074697020746f20757365207468697320604482015268333ab731ba34b7b71760b91b60648201526084015b60405180910390fd5b3360009081526003602052604081208054349290610278908490610571565b9250508190555034600260008282546102919190610571565b909155505060405134815233907fd870bae925cfee4bcba43c4af9dd73d2355dfaf3bb76145be3857b4ec634ab9f9060200160405180910390a26001544710610308576040514781527ffbfd8ab7c24300fa9888cd721c8565a7da56759384781283684dcf7c7c4a846b9060200160405180910390a15b565b6000546001600160a01b031633146103735760405162461bcd60e51b815260206004820152602660248201527f4f6e6c7920746865206f776e65722063616e2063616c6c20746869732066756e60448201526531ba34b7b71760d11b6064820152608401610250565b6001544710156103bd5760405162461bcd60e51b815260206004820152601560248201527423b7b0b6103737ba103cb2ba103932b0b1b432b21760591b6044820152606401610250565b478061040b5760405162461bcd60e51b815260206004820152601e60248201527f546865726520617265206e6f207469707320746f2077697468647261772e00006044820152606401610250565b6000600281905580546040516001600160a01b039091169083908381818185875af1925050503d806000811461045d576040519150601f19603f3d011682016040523d82523d6000602084013e610462565b606091505b50509050806104a65760405162461bcd60e51b815260206004820152601060248201526f2a3930b739b332b9103330b4b632b21760811b6044820152606401610250565b6000546040518381526001600160a01b03909116907fb90a88a5e6d88aa2baf23e87edd29a157df95572bb85a56cdaeaf0b00b548d1c9060200160405180910390a25050565b6000602082840312156104fe57600080fd5b81356001600160a01b038116811461051557600080fd5b9392505050565b634e487b7160e01b600052601160045260246000fd5b80820281158282048414176105495761054961051c565b92915050565b60008261056c57634e487b7160e01b600052601260045260246000fd5b500490565b808201808211156105495761054961051c56fea2646970667358221220050494b8227be0f26b7b9e30671745693aa3834f9dc42da4a5a08153c18d001864736f6c634300081e0033",
+  "deployedBytecode": "0x6080604052600436106100865760003560e01c80634ffa7d50116100595780634ffa7d50146100e55780637b8c8de11461011b5780638da5cb5b14610148578063953b8fb814610180578063c5c4744c1461019657600080fd5b80630cdaecc61461008b57806312065fe0146100b35780632755cd2d146100c65780633aaa74b2146100d0575b600080fd5b34801561009757600080fd5b506100a06101ac565b6040519081526020015b60405180910390f35b3480156100bf57600080fd5b50476100a0565b6100ce6101f2565b005b3480156100dc57600080fd5b506100ce61030a565b3480156100f157600080fd5b506100a06101003660046104ec565b6001600160a01b031660009081526003602052604090205490565b34801561012757600080fd5b506100a06101363660046104ec565b60036020526000908152604090205481565b34801561015457600080fd5b50600054610168906001600160a01b031681565b6040516001600160a01b0390911681526020016100aa565b34801561018c57600080fd5b506100a060015481565b3480156101a257600080fd5b506100a060025481565b60006001546000036101be5750600090565b6001546000906101cf476064610532565b6101d9919061054f565b9050606481116101e957806101ec565b60645b91505090565b600034116102595760405162461bcd60e51b815260206004820152602960248201527f596f75206d7573742073656e6420612074697020746f20757365207468697320604482015268333ab731ba34b7b71760b91b60648201526084015b60405180910390fd5b3360009081526003602052604081208054349290610278908490610571565b9250508190555034600260008282546102919190610571565b909155505060405134815233907fd870bae925cfee4bcba43c4af9dd73d2355dfaf3bb76145be3857b4ec634ab9f9060200160405180910390a26001544710610308576040514781527ffbfd8ab7c24300fa9888cd721c8565a7da56759384781283684dcf7c7c4a846b9060200160405180910390a15b565b6000546001600160a01b031633146103735760405162461bcd60e51b815260206004820152602660248201527f4f6e6c7920746865206f776e65722063616e2063616c6c20746869732066756e60448201526531ba34b7b71760d11b6064820152608401610250565b6001544710156103bd5760405162461bcd60e51b815260206004820152601560248201527423b7b0b6103737ba103cb2ba103932b0b1b432b21760591b6044820152606401610250565b478061040b5760405162461bcd60e51b815260206004820152601e60248201527f546865726520617265206e6f207469707320746f2077697468647261772e00006044820152606401610250565b6000600281905580546040516001600160a01b039091169083908381818185875af1925050503d806000811461045d576040519150601f19603f3d011682016040523d82523d6000602084013e610462565b606091505b50509050806104a65760405162461bcd60e51b815260206004820152601060248201526f2a3930b739b332b9103330b4b632b21760811b6044820152606401610250565b6000546040518381526001600160a01b03909116907fb90a88a5e6d88aa2baf23e87edd29a157df95572bb85a56cdaeaf0b00b548d1c9060200160405180910390a25050565b6000602082840312156104fe57600080fd5b81356001600160a01b038116811461051557600080fd5b9392505050565b634e487b7160e01b600052601160045260246000fd5b80820281158282048414176105495761054961051c565b92915050565b60008261056c57634e487b7160e01b600052601260045260246000fd5b500490565b808201808211156105495761054961051c56fea2646970667358221220050494b8227be0f26b7b9e30671745693aa3834f9dc42da4a5a08153c18d001864736f6c634300081e0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/TipJar.sol:TipJar",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 5,
+        "contract": "contracts/TipJar.sol:TipJar",
+        "label": "targetAmount",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 7,
+        "contract": "contracts/TipJar.sol:TipJar",
+        "label": "totalRaised",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 11,
+        "contract": "contracts/TipJar.sol:TipJar",
+        "label": "donorBalances",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

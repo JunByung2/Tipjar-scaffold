@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/TipJar.sol": {
+      "content": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.13;\r\n\r\ncontract TipJar {\r\n    address public owner;\r\n    uint256 public targetAmount;\r\n    uint256 public totalRaised;\r\n\r\n    mapping(address => uint256) public donorBalances;\r\n\r\n    event TipReceived(address indexed tipper, uint256 amount);\r\n    event TipWithdrawn(address indexed owner, uint256 amount);\r\n    event GoalReached(uint256 totalAmount);\r\n\r\n    constructor(uint256 _targetAmount) {\r\n        owner = msg.sender;\r\n        targetAmount = _targetAmount;\r\n    }\r\n\r\n    modifier onlyOwner() {\r\n        require(msg.sender == owner, \"Only the owner can call this function.\");\r\n        _;\r\n    }\r\n\r\n    modifier goalReached() {\r\n        require(address(this).balance >= targetAmount, \"Goal not yet reached.\");\r\n        _;\r\n    }\r\n\r\n    function tip() public payable {\r\n        require(msg.value > 0, \"You must send a tip to use this function.\");\r\n\r\n        donorBalances[msg.sender] += msg.value;\r\n        totalRaised += msg.value;\r\n\r\n        emit TipReceived(msg.sender, msg.value);\r\n\r\n        if (address(this).balance >= targetAmount) {\r\n            emit GoalReached(address(this).balance);\r\n        }\r\n    }\r\n\r\n    function withdrawTips() public onlyOwner goalReached {\r\n        uint256 contractBalance = address(this).balance;\r\n        require(contractBalance > 0, \"There are no tips to withdraw.\");\r\n\r\n        // CEI 패턴: 상태 변경 먼저\r\n        totalRaised = 0;\r\n\r\n        (bool success, ) = payable(owner).call{ value: contractBalance }(\"\");\r\n        require(success, \"Transfer failed.\");\r\n\r\n        emit TipWithdrawn(owner, contractBalance);\r\n    }\r\n\r\n    function getDonorBalance(address _donor) public view returns (uint256) {\r\n        return donorBalances[_donor];\r\n    }\r\n\r\n    function getBalance() public view returns (uint256) {\r\n        return address(this).balance;\r\n    }\r\n\r\n    function getCompletionRate() public view returns (uint256) {\r\n        if (targetAmount == 0) return 0;\r\n        uint256 rate = (address(this).balance * 100) / targetAmount;\r\n        return rate > 100 ? 100 : rate;\r\n    }\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
